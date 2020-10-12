@@ -1,22 +1,20 @@
 import React from "react";
-import logo from "./logo.svg";
+import Header from "./components/Header";
+import Todo from "./components/Todo";
+import About from "./components/About";
+import Contact from "./components/Contact";
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello react</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Now React is working
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Header />
+        <Route path="/" exact component={Todo} />
+        <Route path="/contact" exact component={Contact} />
+        <Route path="/about" exact component={About} />
+      </Router>
     </div>
   );
 }

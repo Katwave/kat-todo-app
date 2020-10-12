@@ -1,38 +1,478 @@
-.App {
-  text-align: center;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  -webkit-box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
+          box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 100;
 }
 
-.App-logo {
-  height: 40vmin;
+.header h1 {
+  background: -webkit-gradient(linear, left top, right top, from(#654ea3), to(#eaafc8));
+  background: linear-gradient(to right, #654ea3, #eaafc8);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header .nav {
+  width: 100%;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.header .nav li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 8px;
+  padding: 10px 16px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.header .nav li:hover {
+  color: #654ea3;
+}
+
+.todo {
+  width: 100%;
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 6px;
+}
+
+.todo .add-todo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: transparent;
+  top: 0%;
+  left: 0;
+  margin-top: 5%;
+}
+
+@media screen and (max-width: 1250px) {
+  .todo .add-todo {
+    margin-top: 7%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .todo .add-todo {
+    margin-top: 9%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .todo .add-todo {
+    margin-top: 12%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .todo .add-todo {
+    margin-top: 15%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .todo .add-todo {
+    margin-top: 17%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .todo .add-todo {
+    margin-top: 20%;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .todo .add-todo {
+    margin-top: 23%;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .todo .add-todo {
+    margin-top: 26%;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .todo .add-todo {
+    margin-top: 30%;
+  }
+}
+
+@media screen and (max-width: 328px) {
+  .todo .add-todo {
+    margin-top: 35%;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .todo .add-todo {
+    margin-top: 40%;
+  }
+}
+
+.todo .add-todo form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.todo .add-todo input {
+  width: 600px;
+  height: 42px;
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 22px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.todo .add-todo input:hover {
+  -webkit-box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 900px) {
+  .todo .add-todo input {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .todo .add-todo input {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 362px) {
+  .todo .add-todo input {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 312px) {
+  .todo .add-todo input {
+    width: 200px;
+  }
+}
+
+.todo .add-todo button {
+  width: 50px;
+  height: 42px;
+  background: #654ea3;
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.todo .add-todo button:hover {
+  background: #56428b;
+}
+
+.todo-item-container {
+  background: transparent;
+  width: 100%;
+  margin-top: 5%;
+  min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.todo-item-container .todoList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-item-container .todoList .todo-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 10px;
+  background: #fff;
+  min-width: 250px;
+  -webkit-box-shadow: 3px 3px 24px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 24px rgba(0, 0, 0, 0.5);
+  -webkit-animation: drop 0.3s linear 1;
+          animation: drop 0.3s linear 1;
+}
+
+@-webkit-keyframes drop {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes drop {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.todo-item-container .todoList .todo-item li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 8px;
+}
+
+.todo-item-container .todoList .todo-item .checked {
+  opacity: 0.6;
+}
+
+.todo-item-container .todoList .todo-item button {
+  width: 50px;
+  height: 42px;
+  background: #654ea3;
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.todo-item-container .todoList .todo-item button:hover {
+  background: #56428b;
+}
+
+.todo-item-container .todoList .todo-item button:nth-child(2) {
+  background: #e24f8c;
+}
+
+.todo-item-container .todoList .todo-item button:nth-child(2):hover {
+  background: #2c9702;
+}
+
+.todo-item-container .todoList .todo-item button i {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo-item-container .todoList .delete-todo {
+  display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.about {
+  width: 100%;
+  margin-top: 5%;
+  background: red;
+}
+
+.about h1 {
+  font-size: 3em;
+  font-weight: 400;
+}
+
+.about h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.about {
+  width: 100%;
+  margin-top: 12%;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.about h1 {
+  font-size: 3em;
+  font-weight: 400;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.about a {
+  text-decoration: none;
+  width: 50px;
+  height: 42px;
+  background: #654ea3;
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  margin-right: 6px;
+}
+
+.about a:hover {
+  background: #56428b;
+}
+
+.about h2 {
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .about {
+    margin-top: 20%;
   }
-  to {
-    transform: rotate(360deg);
+  .about h1 {
+    font-size: 30px;
   }
 }
+
+@media screen and (max-width: 650px) {
+  .about {
+    margin-top: 25%;
+  }
+  .about h1 {
+    font-size: 24px;
+  }
+  .about h2 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about {
+    margin-top: 30%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about {
+    margin-top: 38%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .about {
+    margin-top: 50%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #000;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background: #ddd;
+}
+/*# sourceMappingURL=App.css.map */
